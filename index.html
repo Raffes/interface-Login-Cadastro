@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+ 
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100"> 
+
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+            <a class="navbar-brand logo">Poket+</a>
+            <form class="d-flex">
+                <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                    Login
+                </button>
+            </form>
+            </div>
+        </nav>
+
+        <main class="flex-fill d-flex align-items-center"> 
+            <div class="container">
+                <!-- <div class="row min-vh-100"> -->
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img class="h-100 w-100" src="/img/jaconda-34.png" alt="crescimento financeiro - Illustration by Aleksandr Smetanov from Ouch!">
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <form name="formRegisterUser">
+                            <div class="mb-2">
+                                <h2 class="text-center">Cadastre-se e conheça :)</h2>
+                            </div>
+                            <div class="mb-2">
+                                <label for="nicknameRegister" class="form-label">Apelido</label>
+                                <input type="text" class="form-control" id="nicknameRegister" aria-describedby="nicknameHelp">
+                                <div id="nicknameHelp" class="form-text">Escolha como quer ser chamado :D</div>
+                            </div>
+                            <div class="mb-2">
+                                <label for="emailRegister" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="emailRegister">
+                            </div>
+                            <div class="mb-2">
+                                <label for="passwordRegister" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="passwordRegister">
+                            </div>
+                            <div class="mb-2">
+                                <label for="ConPasswordRegister" class="form-label">Confirme a Senha</label>
+                                <input type="password" class="form-control" id="ConPasswordRegister">
+                            </div>
+
+                            <!-- <div class="mb-2 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div> -->
+                            
+                            <button type="submit" class="btn btn-primary" onclick="validar()">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="border-top text-muted bg-light" >
+            <div class="container">
+        
+                <div class="row py-3">
+        
+                    <div class="col-12 col-md-4 pb-2 text-center">
+                        <a routerLink="privacy" class="text-decoration-none text-dark">
+                            Política de Privacidade
+                        </a><br>
+                        <a routerLink="terms" class="text-decoration-none text-dark">
+                            Termos de Uso
+                        </a><br>
+                        
+                    </div>
+        
+                    <div class="col-12  col-md-4 pb-2 text-center">
+                        
+                        <a routerLink="about" class="text-decoration-none text-dark">
+                            Quem somos
+                        </a><br>
+                        <a href="contact" class="text-decoration-none text-dark">
+                            Contato
+                        </a>
+                        
+                    </div>
+        
+                    <div class="col-12 col-md-4 text-center">
+                        &copy; 2021 - Poket+ <br>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </footer>
+    </div>
+
+      <!-- Modal Login -->
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="modalLoginLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <h2 class="text-center">Acesse aqui :)</h2>
+                </div>
+                <div class="mb-3">
+                    <label for="emailLogin" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailLogin">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordLogin" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="passwordLogin">
+                </div>
+                <!-- <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Acessar</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
