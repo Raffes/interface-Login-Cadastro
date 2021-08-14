@@ -14,7 +14,32 @@ body {
     /* font-family: 'Zilla Slab Highlight', cursive; */
     font-family: 'Chewy', cursive;
     font-weight: 400;
+    color: #2b9962 !important;
+    /* color: #ff853f !important; */
+    /* color: #f9d039 !important; */
     
     /* height: 300px; */
 
 }
+
+.imageText {
+    position: relative;
+}
+
+.imageText h3 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+}
+
+.modal-dialog-size {
+    width: 400px !important;
+}
+
+/* .loginAuthentic input{
+    width: 100px;
+} */

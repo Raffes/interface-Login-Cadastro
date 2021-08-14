@@ -21,7 +21,7 @@
 <body>
     <div class="d-flex flex-column min-vh-100"> 
 
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-light mb-3">
             <div class="container-fluid">
             <a class="navbar-brand logo">Poket+</a>
             <form class="d-flex">
@@ -36,8 +36,10 @@
             <div class="container">
                 <!-- <div class="row min-vh-100"> -->
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 imageText">
+                        <h3>Esteja no controle do seu dinheiro e sonhos &#128521;</h3>
                         <img class="h-100 w-100" src="/img/jaconda-34.png" alt="crescimento financeiro - Illustration by Aleksandr Smetanov from Ouch!">
+                        
                     </div>
 
                     <div class="col-12 col-md-6 mb-3">
@@ -47,20 +49,22 @@
                             </div>
                             <div class="mb-2">
                                 <label for="nicknameRegister" class="form-label">Apelido</label>
-                                <input type="text" class="form-control" id="nicknameRegister" aria-describedby="nicknameHelp">
-                                <div id="nicknameHelp" class="form-text">Escolha como quer ser chamado :D</div>
+                                <input type="text" class="form-control" id="nicknameRegister" aria-describedby="nicknameHelp" required>
+                                <!-- <div id="nicknameHelp" class="form-text d-none text-danger"></div>  -->
+                                <!-- <div id="nicknameHelp" class="form-text">Escolha como quer ser chamado :D</div> -->
                             </div>
                             <div class="mb-2">
                                 <label for="emailRegister" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="emailRegister">
+                                <input type="email" class="form-control" id="emailRegister" required>
                             </div>
                             <div class="mb-2">
                                 <label for="passwordRegister" class="form-label">Senha</label>
-                                <input type="password" class="form-control" id="passwordRegister">
+                                <input type="password" class="form-control" id="passwordRegister" required>
                             </div>
                             <div class="mb-2">
                                 <label for="ConPasswordRegister" class="form-label">Confirme a Senha</label>
-                                <input type="password" class="form-control" id="ConPasswordRegister">
+                                <input type="password" class="form-control" id="ConPasswordRegister" aria-describedby="confPwd" required>
+                                <div id="confPwd" class="form-text text-danger"></div> 
                             </div>
 
                             <!-- <div class="mb-2 form-check">
@@ -68,7 +72,7 @@
                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             </div> -->
                             
-                            <button type="submit" class="btn btn-primary" onclick="validar()">Cadastrar</button>
+                            <button type="submit" class="btn btn-primary float-end" onclick="validar()">Cadastrar</button>
                         </form>
                     </div>
                 </div>
@@ -114,24 +118,25 @@
 
       <!-- Modal Login -->
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-size">
       <div class="modal-content">
         <!-- <div class="modal-header">
           <h5 class="modal-title" id="modalLoginLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
         </div> -->
         <div class="modal-body">
-            <form>
+            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+            <form class="loginAuthentic pb-5">
                 <div class="mb-3">
-                    <h2 class="text-center">Acesse aqui :)</h2>
+                    <h2 class="text-center">Login</h2>
                 </div>
                 <div class="mb-3">
                     <label for="emailLogin" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="emailLogin">
+                    <input type="email" class="form-control" id="emailLogin" required>
                 </div>
                 <div class="mb-3">
                     <label for="passwordLogin" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="passwordLogin">
+                    <input type="password" class="form-control" id="passwordLogin" required>
                 </div>
                 <!-- <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">

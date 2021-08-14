@@ -21,6 +21,9 @@ function validar() {
     if(confirmPassword == '' || confirmPassword.length <= 12){
             alert('Menor que 12 digitos ou esta vazia');
             formRegisterUser.ConPasswordRegister.focus()
+
+        document.getElementById("confPwd").style.display = "block"
+        document.getElementById("confPwd").innerHTML = "confirmação errada diferentes"
             return false
     }
 }
